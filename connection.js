@@ -42,7 +42,7 @@ app.use(express.json());
 app.use(express.static('portfolio'))
 app.use(express.urlencoded({ extended: true }));
 app.get("/",(req,res)=>{
-    res.send("Server")});
+    res.json({message:"Server"})});
 app.post("/",(req,res)=>{
     const {name,email,phone,message}=req.body;
     const sqlquery="INSERT INTO user(name,email,phone,message) VALUES(?,?,?,?)"
