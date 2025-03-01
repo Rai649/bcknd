@@ -60,7 +60,7 @@ app.post("/",(req,res)=>{
    
 
 })
-app.listen(4000,(err)=>{
+app.listen(process.env.PORT||4000,(err)=>{
    if(err) console.log("Server crash")
     else{
 console.log("Server started")}
